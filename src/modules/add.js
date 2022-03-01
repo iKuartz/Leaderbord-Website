@@ -1,4 +1,5 @@
-add(added,array); {
-    
-}
-export default add;
+
+export default function add(added, array) {
+    added +=
+        array += }
+

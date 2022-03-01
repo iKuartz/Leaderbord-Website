@@ -1,5 +1,3 @@
-create(array);{
-
-};
-
-export default create()
+export default create(array); {
+    array +=
+}

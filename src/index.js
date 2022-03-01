@@ -1,5 +1,10 @@
-import css from "./styles.css"
+import './styles.css';
 
-import add from "./modules/add.js";
-import create from "./modules/create.js";
-import order from "./modules/order.js";
+import add from './modules/add.js';
+import create from './modules/create.js';
+import order from './modules/order.js';
+
+const a = 1;
+add(a, a);
+create();
+order();
