@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Lato, 'Times New Roman', Times, serif;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25pt;
+  font-size: large;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side {
+    padding: 20pt;
+  max-width: 55vw;
+}
+
+.right-side {
+    padding: 20pt;
+  max-width: 45vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.recent {
+    padding-bottom: 10pt;
+}
+
+.leaderboard {
+    border: 2px black solid;
+    list-style-type: none;
+}
+
+.add-your,
+.name,
+.score{
+    margin-bottom: 10pt;
+}
+
+.submit {
+    align-self: flex-end;
+}
