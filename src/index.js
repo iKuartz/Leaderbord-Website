@@ -6,5 +6,5 @@ import order from './modules/order.js';
 
 const a = 1;
 add(a, a);
-create();
+create(a);
 order();

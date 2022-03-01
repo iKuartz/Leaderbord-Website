@@ -1,3 +1,5 @@
-export default create(array); {
-    array +=
+export default function create(array) {
+  array
+      += array;
+  return array;
 }
