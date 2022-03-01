@@ -1,50 +1,34 @@
-const gameName = 'PokerjackAndDragons';
-const apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
-const uniqueId = 'PokerjackAndDragons12341234'
+const start = async (url, data) => {
+  const apiId = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({
+      name: data.name,
+    }),
+  });
+  return apiId.json();
+};
 
-// const start = async (name = gameName) => {
-//   const apiId = await fetch(apiURL, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({
-//       name,
-//     }),
-
-//   });
-//   await apiId.json();
-//   return apiId;
-// };
-
-// const uniqueId = start;
-// console.log(uniqueId);
-
-const post = async (userName, userScore, gameId = uniqueId) => {
-  const scoresURL = `${apiURL}/${gameId}/scores`;
-
-  const results = await fetch(scoresURL, {
+const post = async (url, data) => {
+  const results = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      user: userName,
-      score: userScore,
+      user: data.user,
+      score: data.score,
     }),
-
   });
-
-  await results.json();
-  return results;
+  return results.json();
 };
 
-const get = async (gameId = uniqueId) => {
-  const scoresURL = `${apiURL}/${gameId}/scores`;
-  const data = await fetch(scoresURL);
-  const userScores = await data.json();
+const get = async (url) => {
+  const userScores = await fetch(url);
 
-  return userScores;
+  return userScores.json;
 };
 
 export { get, post, start };
