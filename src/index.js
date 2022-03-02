@@ -18,7 +18,7 @@ const saveCreate = () => {
   if (!gameIdFromStorage()) {
     window.addEventListener('load', async () => {
       const { result } = await start(`${apiURL}games`, data);
-      const gameID = result.substr(14, 20);
+      const gameID = result;
       localStorage.setItem('ID', JSON.stringify(gameID));
     });
   }
@@ -50,6 +50,7 @@ const getScores = async () => {
   const liTag = document.createElement('li');
   const url = `${apiURL}games/${gameIdFromStorage()}/scores/`;
   const { result } = await get(url);
+  // setTimeout(() => (result ? console.log(result) : console.log('falso')), 10000);
   result.sort((a, b) => b.score - a.score);
   result.forEach((item) => {
     liTag.textContent = `${item.user}:${item.score} `;

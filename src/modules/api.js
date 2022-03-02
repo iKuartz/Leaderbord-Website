@@ -28,7 +28,7 @@ const post = async (url, data) => {
 const get = async (url) => {
   const userScores = await fetch(url);
 
-  return userScores.json;
+  return userScores.json();
 };
 
 export { get, post, start };
