@@ -50,7 +50,6 @@ const getScores = async () => {
   const liTag = document.createElement('li');
   const url = `${apiURL}games/${gameIdFromStorage()}/scores/`;
   const { result } = await get(url);
-  // setTimeout(() => (result ? console.log(result) : console.log('falso')), 10000);
   result.sort((a, b) => b.score - a.score);
   result.forEach((item) => {
     liTag.textContent = `${item.user}:${item.score} `;
