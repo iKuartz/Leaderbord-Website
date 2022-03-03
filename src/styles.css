@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Lato, 'Times New Roman', Times, serif;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25pt;
+  font-size: 30px;
+  background-color: blanchedalmond;
+}
+
+.title{
+  color: darkblue;
+
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  background-color: cyan;
+}
+
+.left-side {
+    padding: 20px;
+  max-width: 55vw;
+  min-width: 80px;
+}
+
+.right-side {
+    padding: 20px;
+  max-width: 45vw;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recent {
+    padding-bottom: 10px;
+}
+
+.leaderboard {
+    border: 2px black solid;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.leaderboard li{
+  text-align: center;
+  padding: 4px;
+}
+
+.leaderboard li:nth-child(even) {
+  background-color: rgb(189, 169, 186);
+}
+
+.update{
+    background-color: white;
+    font-size: 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.add-your,
+.name,
+.score{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.submit {
+    align-self: flex-end;
+    background-color: white;
+    font-size: 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+
+}
